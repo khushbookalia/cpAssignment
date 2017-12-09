@@ -22,8 +22,8 @@ mongoose.connect("mongodb://cpEventMgmt:1234@ds121696.mlab.com:21696/event_manag
 app.set( 'port', ( process.env.PORT || 4000 ));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use(passport.initialize());   
-// require('./helpers/passport')(passport);
+app.use(passport.initialize());   
+require('./helpers/passport')(passport);
 
 app.use(cors());
 app.use("/api",apiRoute);
