@@ -17,3 +17,13 @@ exports.postEventUser = function(req,res){
             res.json({ success: true, message: 'NEw User saved', data: values });
     })()
 }
+
+exports.getOrganisers = function (req, res){
+    eventUser.find({userType: 'ORGS'}).exec(function (err, data) {
+        //console.log(data,"dat>>>>>>>>");
+        if (err) {
+            res.send({ success: false, message: 'Error in fetching organisers', data: err});
+        }
+        res.json({ success: true, message: 'Received organiser Details', data: data });
+    })
+}
