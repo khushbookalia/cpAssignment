@@ -6,8 +6,8 @@ exports.addEvent = function(req,res){
     //console.log("Request for new event..",req.body);
     promise.coroutine(function* () {   //generator function
         let values = new events({
-                title: req.body.title,
-                dateOfEvent: req.body.dateOfEvent,
+                title: req.body.eventName,
+                dateOfEvent: req.body.date,
                 organisers: req.body.organisers,
                 location: req.body.location,
                 description: req.body.description,
