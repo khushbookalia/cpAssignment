@@ -25,7 +25,7 @@ const eventSchema = mongoose.Schema({
         type: String
     },
     ticketPrice:{
-        type: Number,
+        type: String,
         default: null
     }
 })

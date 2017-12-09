@@ -14,7 +14,7 @@ exports.addEvent = function(req,res){
                 ticketPrice: req.body.ticketPrice
             });
             yield values.save();//asynchronous
-            res.json({ success: true, message: 'NEw User saved', data: values });
+            res.json({ success: true, message: 'NEw Event saved', data: values });
     })()
 }
 
