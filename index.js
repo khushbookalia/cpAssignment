@@ -37,3 +37,8 @@ app.listen(app.get( 'port' ), function(err,data){
     }
 })
 
+
+
+
+
+/* note: heroku logs --tail, for running status while pushing to server */
